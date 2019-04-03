@@ -1,0 +1,137 @@
+@colour_white: #ffffff;
+@smokey-color: #aaaaaa;
+@charcoal-color: #343434;
+
+.checkout-index-index {
+  form.form.form-login {
+    border-bottom: none;
+    padding: 0 10% 0 0;
+    .actions-toolbar {
+      margin-left: 30%;
+    }
+
+    #customer-email-login-fieldset.fieldset {
+      fieldset.fieldset.hidden-fields {
+        display: block !important;
+      }
+      .field {
+        margin: 30px 0 10px;
+      }
+    }
+    .guest{
+      width: 100%;
+      .primary {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+        clear: both;
+      }
+    }
+    .secondary {
+      float: right;
+    }
+  }
+  .or-border {
+    letter-spacing: 1px;
+    text-align: center;
+    color: @charcoal-color;
+    display: block;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+    &:after {
+      content: "";
+      width: 130px;
+      height: 3px;
+      background: @charcoal-color;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      bottom: 15px;
+    }
+    span {
+      background: @color-white;
+      padding: 0 5px;
+      z-index: 1;
+      position: relative;
+    }
+  }
+  .checkout-as-guest {
+    margin-left: 27%;
+    margin-right: 10%;
+
+    .continue.primary {
+      width: 100%;
+      background: @charcoal-color;
+      padding: 10px 25px;
+      transition: .5s ease-all;
+      &:hover {
+        background-color: @smokey-color;
+      }
+    }
+  }
+  #opc-shipping_method {
+    form.form.form-login {
+      border-bottom: 1px solid #b3b3b3;
+      padding-bottom: 20px;
+      #customer-email-login-fieldset.fieldset {
+        fieldset.fieldset.hidden-fields {
+          display: none!important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .checkout-index-index {
+    &.page-layout-1column {
+      form {
+        &.form-login {
+          padding: 0;
+          .actions-toolbar {
+            margin-left: 0;
+            .secondary {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+      .checkout-as-guest {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    form {
+      &.form {
+        &.form-login {
+          &.user-form {
+            margin: 0;
+
+            #customer-email-login-fieldset {
+              .field {
+                margin: 0 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  .checkout-index-index {
+    &.page-layout-1column {
+      .opc-wrapper {
+        #checkoutSteps {
+          min-height: 800px;
+        }
+      }
+    }
+  }
+}

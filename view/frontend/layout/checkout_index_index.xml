@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="authentication" xsi:type="array">
+                                    <item name="config" xsi:type="array">
+                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                    </item>
+                                </item>
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="email-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">Sqli_CheckoutLoginStep/js/view/email</item>
+                                            <item name="sortOrder" xsi:type="string">0</item>
+                                            <item name="children" xsi:type="array">
+                                                <item name="customer-email" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">50</item>
+                                                    <item name="component" xsi:type="string">Sqli_CheckoutLoginStep/js/view/form/element/email-login</item>
+                                                    <item name="displayArea" xsi:type="string">login-methods</item>
+                                                    <item name="tooltip" xsi:type="array">
+                                                        <item name="description" xsi:type="string" translate="true">We'll send your order confirmation here.</item>
+                                                    </item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="before-login-form" xsi:type="array">
+                                                            <item name="component" xsi:type="string">uiComponent</item>
+                                                            <item name="displayArea" xsi:type="string">before-login-form</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <!-- before login form fields -->
+                                                            </item>
+                                                        </item>
+                                                        <item name="additional-login-form-fields" xsi:type="array">
+                                                            <item name="component" xsi:type="string">uiComponent</item>
+                                                            <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <!-- additional login form fields -->
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

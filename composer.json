@@ -1,0 +1,21 @@
+{
+    "name": "sqli/module-checkout-login-step",
+    "description": "Magento 2 Module to add Separate Checkout Login step ",
+    "require": {
+        "php": "~7.0.0|^7.1",
+        "magento/module-checkout": "*"
+    },
+    "type": "magento2-module",
+    "minimum-stability": "dev",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Sqli\\CheckoutLoginStep\\": ""
+        }
+    }
+}

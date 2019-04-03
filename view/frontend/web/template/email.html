@@ -1,0 +1,36 @@
+<li id="email" data-bind="fadeVisible: isVisible">
+    <!-- ko ifnot: isCustomerLoggedIn() -->
+    <div class="step-title" data-bind="i18n: 'Login'" data-role="title"></div>
+    <!-- /ko -->
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+
+        <each args="getRegion('login-methods')" render="" />
+
+        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <div >
+                <div class="primary checkout-as-guest">
+                    <!-- ko if: isVisible() -->
+
+                    <!-- ko ifnot: isCustomerLoggedIn() -->
+                    <div class="or-border">
+                        <span><!-- ko i18n: 'Or'--><!-- /ko --></span>
+                    </div>
+                    <!-- /ko -->
+
+                    <button data-role="opc-continue" type="submit" class="button action continue primary">
+                        <!-- ko ifnot: isCustomerLoggedIn() -->
+                        <span><!-- ko i18n: 'Checkout As Guest'--><!-- /ko --></span>
+                        <!-- /ko -->
+
+                        <!-- ko if: isCustomerLoggedIn() -->
+                        <span><!-- ko i18n: 'Continue To Delivery'--><!-- /ko --></span>
+                        <!-- /ko -->
+                    </button>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </form>
+    </div>
+</li>

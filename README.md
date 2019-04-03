@@ -1,4 +1,4 @@
-# Sqli_CheckoutLoginStep
+# 3 Step Checkout
 
 Magento 2 Module to add Separate Checkout Login step 
 
